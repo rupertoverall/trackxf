@@ -16,7 +16,7 @@
 			"type": "string",
 			"default": "",
 			"examples": [
-				"https://rupertoverall.net/Rtrack/trackxf_schema_v0.json"
+				"https://rupertoverall.net/trackxf/trackxf_schema_v0.json"
 			],
 			"pattern": "^.*$"
 		},
