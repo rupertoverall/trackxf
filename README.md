@@ -1,2 +1,2 @@
 # trackxf
-Description of the behavioural tracking exchange format trackxf.
+A schema for valiation of the behavioural tracking exchange format trackxf.
