@@ -1,0 +1,792 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1687261970.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"schema",
+		"info",
+		"data"
+	],
+	"properties": {
+		"schema": {
+			"$id": "#root/schema", 
+			"title": "Schema", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"https://rupertoverall.net/Rtrack/trackxf_schema_v0.json"
+			],
+			"pattern": "^.*$"
+		},
+		"info": {
+			"$id": "#root/info", 
+			"title": "Info", 
+			"type": "object",
+			"required": [
+				"type",
+				"title",
+				"version",
+				"authors",
+				"licensing",
+				"recording",
+				"processing",
+				"export"
+			],
+			"properties": {
+				"type": {
+					"$id": "#root/info/type", 
+					"title": "Type", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"mwm"
+					],
+					"pattern": "^.*$"
+				},
+				"title": {
+					"$id": "#root/info/title", 
+					"title": "Title", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				},
+				"version": {
+					"$id": "#root/info/version", 
+					"title": "Version", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				},
+				"authors": {
+					"$id": "#root/info/authors", 
+					"title": "Authors", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				},
+				"licensing": {
+					"$id": "#root/info/licensing", 
+					"title": "Licensing", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"GPL"
+					],
+					"pattern": "^.*$"
+				},
+				"recording": {
+					"$id": "#root/info/recording", 
+					"title": "Recording", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						""
+					],
+					"pattern": "^.*$"
+				},
+				"processing": {
+					"$id": "#root/info/processing", 
+					"title": "Processing", 
+					"type": "object",
+					"required": [
+						"software",
+						"version",
+						"date",
+						"url"
+					],
+					"properties": {
+						"software": {
+							"$id": "#root/info/processing/software", 
+							"title": "Software", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"Rtrack"
+							],
+							"pattern": "^.*$"
+						},
+						"version": {
+							"$id": "#root/info/processing/version", 
+							"title": "Version", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"2.0.0.64"
+							],
+							"pattern": "^.*$"
+						},
+						"date": {
+							"$id": "#root/info/processing/date", 
+							"title": "Datetime", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"2023-06-20T12:07:09+0200"
+							],
+							"pattern": "^.*$"
+						},
+						"url": {
+							"$id": "#root/info/processing/url", 
+							"title": "URL", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"https://rupertoverall.net/Rtrack"
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+,
+				"export": {
+					"$id": "#root/info/export", 
+					"title": "Export", 
+					"type": "object",
+					"required": [
+						"software",
+						"version",
+						"date",
+						"url"
+					],
+					"properties": {
+						"software": {
+							"$id": "#root/info/export/software", 
+							"title": "Software", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"Rtrack"
+							],
+							"pattern": "^.*$"
+						},
+						"version": {
+							"$id": "#root/info/export/version", 
+							"title": "Version", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"2.0.0.64"
+							],
+							"pattern": "^.*$"
+						},
+						"date": {
+							"$id": "#root/info/export/date", 
+							"title": "Date", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"2023-06-20T12:07:45+0200"
+							],
+							"pattern": "^.*$"
+						},
+						"url": {
+							"$id": "#root/info/export/url", 
+							"title": "Url", 
+							"type": "string",
+							"default": "",
+							"examples": [
+								"https://rupertoverall.net/Rtrack"
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+
+			}
+		}
+,
+		"data": {
+			"$id": "#root/data", 
+			"title": "Data", 
+			"type": "object",
+			"required": [
+				"arenas",
+				"subjects",
+				"tracks"
+			],
+			"properties": {
+				"arenas": {
+					"$id": "#root/data/arenas", 
+					"title": "Arenas", 
+					"type": "array",
+					"default": [],
+					"items":{
+						"$id": "#root/data/arenas/items", 
+						"title": "Items", 
+						"type": "object",
+						"required": [
+							"id",
+							"crs",
+							"parameters",
+							"zones"
+						],
+						"properties": {
+							"id": {
+								"$id": "#root/data/arenas/items/id", 
+								"title": "Id", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"Arena_SW"
+								],
+								"pattern": "^.*$"
+							},
+							"crs": {
+								"$id": "#root/data/arenas/items/crs", 
+								"title": "Coordinate Reference System", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"local"
+								],
+								"pattern": "^.*$"
+							},
+							"parameters": {
+								"$id": "#root/data/arenas/items/parameters", 
+								"title": "Application-specific parameters", 
+								"type": "array",
+								"default": [],
+								"items":{
+									"$id": "#root/data/arenas/items/parameters/items", 
+									"title": "Items", 
+									"type": "object",
+									"required": [
+										"name",
+										"value"
+									],
+									"properties": {
+										"name": {
+											"$id": "#root/data/arenas/items/parameters/items/id", 
+											"title": "Parameter name", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"shape"
+											],
+											"pattern": "^.*$"
+										},
+										"value": {
+											"$id": "#root/data/arenas/items/parameters/items/value", 
+											"title": "Parameter value", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"square"
+											],
+											"pattern": "^.*$"
+										}
+									}
+								}
+
+							},
+							"zones": {
+								"$id": "#root/data/arenas/items/zones", 
+								"title": "Zones", 
+								"type": "array",
+								"default": [],
+								"items":{
+									"$id": "#root/data/arenas/items/zones/items", 
+									"title": "Items", 
+									"type": "object",
+									"required": [
+										"id",
+										"x",
+										"y"
+									],
+									"properties": {
+										"id": {
+											"$id": "#root/data/arenas/items/zones/items/id", 
+											"title": "Id", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"box"
+											],
+											"pattern": "^.*$"
+										},
+										"x": {
+											"$id": "#root/data/arenas/items/zones/items/x", 
+											"title": "Coordinates in the 1st dimension for the perimeter of the zone", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"0, 0, 1, 1, 0"
+											],
+											"pattern": "^.*$"
+										},
+										"y": {
+											"$id": "#root/data/arenas/items/zones/items/y", 
+											"title": "Coordinates in the 2nd dimension for the perimeter of the zone", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"0, 1, 1, 0, 0"
+											],
+											"pattern": "^.*$"
+										}
+									}
+								}
+
+							}
+						}
+					}
+
+				},
+				"subjects": {
+					"$id": "#root/data/subjects", 
+					"title": "Subjects", 
+					"type": "array",
+					"default": [],
+					"items":{
+						"$id": "#root/data/subjects/items", 
+						"title": "Items", 
+						"type": "object",
+						"required": [
+							"id",
+							"factors"
+						],
+						"properties": {
+							"id": {
+								"$id": "#root/data/subjects/items/id", 
+								"title": "Id", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"Subject_1"
+								],
+								"pattern": "^.*$"
+							},
+							"factors": {
+								"$id": "#root/data/subjects/items/factors", 
+								"title": "Factors", 
+								"type": "array",
+								"default": [],
+								"items":{
+									"$id": "#root/data/subjects/items/factors/items", 
+									"title": "Items", 
+									"type": "object",
+									"required": [
+										"id",
+										"value"
+									],
+									"properties": {
+										"name": {
+											"$id": "#root/data/subjects/items/factors/items/id", 
+											"title": "Factor name", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"group"
+											],
+											"pattern": "^.*$"
+										},
+										"value": {
+											"$id": "#root/data/subjects/items/factors/items/value", 
+											"title": "Factor value", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"control"
+											],
+											"pattern": "^.*$"
+										}
+									}
+								}
+							}
+						}
+					}
+
+				},
+				"tracks": {
+					"$id": "#root/data/tracks", 
+					"title": "Tracks", 
+					"type": "array",
+					"default": [],
+					"items":{
+						"$id": "#root/data/tracks/items", 
+						"title": "Items", 
+						"type": "object",
+						"required": [
+							"id",
+							"subject",
+							"session",
+							"arena",
+							"factors",
+							"coordinates"
+						],
+						"properties": {
+							"id": {
+								"$id": "#root/data/tracks/items/id", 
+								"title": "Id", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"Track_1"
+								],
+								"pattern": "^.*$"
+							},
+							"subject": {
+								"$id": "#root/data/tracks/items/subject", 
+								"title": "Subject", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"Subject_1"
+								],
+								"pattern": "^.*$"
+							},
+							"session": {
+								"$id": "#root/data/tracks/items/session", 
+								"title": "Session", 
+								"type": "integer",
+								"examples": [
+									1
+								],
+								"default": 1
+							},
+							"arena": {
+								"$id": "#root/data/tracks/items/arena", 
+								"title": "Arena", 
+								"type": "string",
+								"default": "",
+								"examples": [
+									"Arena_SW"
+								],
+								"pattern": "^.*$"
+							},
+							"factors": {
+								"$id": "#root/data/tracks/items/factors", 
+								"title": "Track factors", 
+								"type": "array",
+								"default": [],
+								"items":{
+									"$id": "#root/data/tracks/items/factors/items", 
+									"title": "Items", 
+									"type": "object",
+									"required": [
+										"name",
+										"value"
+									],
+									"properties": {
+										"name": {
+											"$id": "#root/data/tracks/items/factors/items/name", 
+											"title": "Name", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"Day"
+											],
+											"pattern": "^.*$"
+										},
+										"value": {
+											"$id": "#root/data/tracks/items/factors/items/value", 
+											"title": "Value", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"1"
+											],
+											"pattern": "^.*$"
+										}
+									}
+								}
+
+							},
+							"coordinates": {
+								"$id": "#root/data/tracks/items/coordinates", 
+								"title": "Coordinate streams", 
+								"type": "array",
+								"default": [],
+								"items":{
+									"$id": "#root/data/tracks/items/coordinates/items", 
+									"title": "Items", 
+									"type": "object",
+									"required": [
+										"id",
+										"t",
+										"x",
+										"y"
+									],
+									"properties": {
+										"id": {
+											"$id": "#root/data/tracks/items/coordinates/items/id", 
+											"title": "Id", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"coordinates"
+											],
+											"pattern": "^.*$"
+										},
+										"parameters": {
+											"$id": "#root/data/tracks/items/coordinates/items/parameters", 
+											"title": "Application-specific parameters", 
+											"type": "array",
+											"default": [],
+											"items":{
+												"$id": "#root/data/tracks/items/coordinates/items/parameters/items", 
+												"title": "Items", 
+												"type": "object",
+												"required": [
+													"id",
+													"value"
+												],
+												"properties": {
+													"id": {
+														"$id": "#root/data/tracks/items/coordinates/items/parameters/items/id", 
+														"title": "Parameter name", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"shape"
+														],
+														"pattern": "^.*$"
+													},
+													"value": {
+														"$id": "#root/data/tracks/items/coordinates/items/parameters/items/value", 
+														"title": "Parameter value", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"square"
+														],
+														"pattern": "^.*$"
+													}
+												}
+											}
+
+										},
+										"t": {
+											"$id": "#root/data/tracks/items/coordinates/items/t", 
+											"title": "Timestamp", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"0,0.08,0.16,0.24,0.32,0.4,0.48,0.56,0.64,0.72"
+											],
+											"pattern": "^.*$"
+										},
+										"x": {
+											"$id": "#root/data/tracks/items/coordinates/items/x", 
+											"title": "X", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"220.9763,220.2634,219.907,219.5506,219.907,219.907,219.907,219.907,210.9967,211.3531"
+											],
+											"pattern": "^.*$"
+										},
+										"y": {
+											"$id": "#root/data/tracks/items/coordinates/items/y", 
+											"title": "Y", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"140.4269,141.4961,142.2089,142.9217,142.9217,142.5653,143.2782,143.6346,143.991,145.0602"
+											],
+											"pattern": "^.*$"
+										}
+									}
+								}
+							},
+							"streams": {
+								"$id": "#root/data/tracks/items/streams", 
+								"title": "Streams", 
+								"type": "array",
+								"default": [],
+								"items":{
+									"$id": "#root/data/tracks/items/streams/items", 
+									"title": "Items", 
+									"type": "object",
+									"required": [
+										"id",
+										"t",
+										"x"
+									],
+									"properties": {
+										"id": {
+											"$id": "#root/data/tracks/items/streams/items/id", 
+											"title": "Id", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"soundLevels"
+											],
+											"pattern": "^.*$"
+										},
+										"parameters": {
+											"$id": "#root/data/tracks/items/streams/items/parameters", 
+											"title": "Application-specific parameters", 
+											"type": "array",
+											"default": [],
+											"items":{
+												"$id": "#root/data/tracks/items/streams/items/parameters/items", 
+												"title": "Items", 
+												"type": "object",
+												"required": [
+													"id",
+													"value"
+												],
+												"properties": {
+													"id": {
+														"$id": "#root/data/tracks/items/streams/items/parameters/items/id", 
+														"title": "Parameter name", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"shape"
+														],
+														"pattern": "^.*$"
+													},
+													"value": {
+														"$id": "#root/data/tracks/items/streams/items/parameters/items/value", 
+														"title": "Parameter value", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"square"
+														],
+														"pattern": "^.*$"
+													}
+												}
+											}
+
+										},
+										"t": {
+											"$id": "#root/data/tracks/items/streams/items/t", 
+											"title": "Timestamp", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"0,0.08,0.16,0.24,0.32,0.4,0.48,0.56,0.64,0.72"
+											],
+											"pattern": "^.*$"
+										},
+										"x": {
+											"$id": "#root/data/tracks/items/streams/items/x", 
+											"title": "Values", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"23,27,29,34,47,58,46,43,39,32"
+											],
+											"pattern": "^.*$"
+										}
+									}
+								}
+							},
+							"events": {
+								"$id": "#root/data/tracks/items/events", 
+								"title": "Events", 
+								"type": "array",
+								"default": [],
+								"items":{
+									"$id": "#root/data/tracks/items/events/items", 
+									"title": "Items", 
+									"type": "object",
+									"required": [
+										"id",
+										"start",
+										"end"
+									],
+									"properties": {
+										"id": {
+											"$id": "#root/data/tracks/items/events/items/id", 
+											"title": "Id", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"lightFlash"
+											],
+											"pattern": "^.*$"
+										},
+										"description": {
+											"$id": "#root/data/tracks/items/events/items/description", 
+											"title": "Description of the event", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"Light period"
+											],
+											"pattern": "^.*$"
+										},
+										"parameters": {
+											"$id": "#root/data/tracks/items/events/items/parameters", 
+											"title": "Application-specific parameters", 
+											"type": "array",
+											"default": [],
+											"items":{
+												"$id": "#root/data/tracks/items/events/items/parameters/items", 
+												"title": "Items", 
+												"type": "object",
+												"required": [
+													"id",
+													"value"
+												],
+												"properties": {
+													"id": {
+														"$id": "#root/data/tracks/items/events/items/parameters/items/id", 
+														"title": "Parameter name", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"intensity"
+														],
+														"pattern": "^.*$"
+													},
+													"value": {
+														"$id": "#root/data/tracks/items/events/items/parameters/items/value", 
+														"title": "Parameter value", 
+														"type": "string",
+														"default": "",
+														"examples": [
+															"500 lux"
+														],
+														"pattern": "^.*$"
+													}
+												}
+											}
+										},
+										"start": {
+											"$id": "#root/data/tracks/items/events/items/start", 
+											"title": "Timestamp", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"0.16"
+											],
+											"pattern": "^.*$"
+										},
+										"end": {
+											"$id": "#root/data/tracks/items/events/items/x", 
+											"title": "Timestamp", 
+											"type": "string",
+											"default": "",
+											"examples": [
+												"0.32"
+											],
+											"pattern": "^.*$"
+										}
+									}
+								}
+							}
+						}
+					}
+
+				}
+			}
+		}
+
+	}
+}
